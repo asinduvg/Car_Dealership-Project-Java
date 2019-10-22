@@ -2,9 +2,9 @@ package car_dealership;
 
 public class Customer {
 	
-	String name;
-	String address;
-	double cashOnHand;
+	private String name;
+	private String address;
+	private double cashOnHand;
 	
 	public void setName(String name) {
 		this.name = name;
@@ -31,7 +31,7 @@ public class Customer {
 	}
 	
 	public void purchaseCar(Vehicle vehicle, Employee emp, boolean finance) {
-		
+		emp.handleCustomer(this, finance, vehicle);
 	}
 	
 }
